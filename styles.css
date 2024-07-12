@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+:root {
+    --color-veryDarkBlue: #0E1323;
+    --color-darkBlue: #1C204B;
+    --color-purple: #5747EA;
+    --color-snowPurple: #BBC0FF;
+    --color-white: #ffffff;
+    --color-lightOrange: #FF8B64;
+    --color-lightBlue:#55C2E6;
+    --color-lightRed:#FF5E7D;
+    --color-lightGreen:#4BCF82;
+    --color-lightPurple:#7335D2;
+    --color-lightYellow:#F1C75B;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color-veryDarkBlue);
+
+    min-height: 100vh;
+
+    font-family: 'Rubik', sans-serif;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+li {
+    list-style-type: none;
+}
+
+/* HELPER */
+
+.view-active {
+    color: white;
+}
+
+.container {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 24px;
+}
+
+.card-profile {
+    background-color: var(--color-darkBlue);
+
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.card-profile-info {
+    background-color: var(--color-purple);
+
+    border-radius: 15px;
+
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    padding: 35px 39px 35px 32px;
+}
+
+.card-profile-info img {
+    width: 17vw;
+    min-width: 64px;
+    max-width: 78px;
+    border: 3px solid var(--color-white);
+    border-radius: 50%;
+}
+
+.card-profile-info-text p {
+    font-size: 15px;
+    color: var(--color-snowPurple);
+}
+
+.card-profile-name {
+    font-weight: 300;
+    font-size: 24px;
+    color: white;
+}
+
+.card-profile-view {
+    padding: 25px 0;
+    display: flex;
+    justify-content: space-around;
+    font-size: 18px;
+    color: var(--color-snowPurple);
+}
+
+.card-profile-view li {
+    cursor: pointer;
+}
+
+.activities {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 24px;
+}
+
+.card-activity {
+    flex-grow: 1;
+    border-radius: 17px;
+    padding-top: 38px;
+    background-repeat: no-repeat;
+    background-position: calc(100% - 17px) -11px;
+}
+
+.card-activity-info {
+    background-color: var(--color-darkBlue);
+    border-radius: 15px;
+    padding: 28px 24px;
+    color: var(--color-white);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.card-activity-info-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card-activity-info-title h2{
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.card-activity-info-title img {
+    width: 21px;
+    height: 5px;
+    cursor: pointer;
+}
+
+.card-activity-info-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.current-amount{
+    font-size: 32px;
+    font-weight: 300;
+}
+
+.previous-amount{
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--color-snowPurple);
+}
+
+.card-work {
+    background-color: var(--color-lightOrange);
+    background-image: url('./images/icon-work.svg');
+}
+.card-play {
+    background-color: var(--color-lightBlue);
+    background-image: url('./images/icon-play.svg');
+}
+.card-study {
+    background-color: var(--color-lightRed);
+    background-image: url('./images/icon-study.svg');
+}
+.card-exercise {
+    background-color: var(--color-lightGreen);
+    background-image: url('./images/icon-exercise.svg');
+}
+.card-social {
+    background-color: var(--color-lightPurple);
+    background-image: url('./images/icon-social.svg');
+}
+.card-selfCare {
+    background-color: var(--color-lightYellow);
+    background-image: url('./images/icon-self-care.svg');
+}
+
+@media screen and (min-width: 900px){
+    .card-profile-name {
+        font-size: 40px;
+    }
+
+    .card-profile {
+        min-width: 255px;
+    }
+
+    .card-profile-info {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 43px;
+    }
+
+    .card-profile-view {
+        flex-direction: column;
+        gap: 21px;
+        padding: 32px;
+    }
+
+    .container {
+        flex-direction: row;
+    }
+
+    .activities {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .card-activity {
+        padding-top: 45px;
+        min-width: 255px;
+        max-width: 327px;
+        flex: 1;
+    }
+
+    .card-activity-info {
+        padding: 29px 32px 34px 32px;
+        justify-content: space-between;
+    }
+
+    .card-activity-info-content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .current-amount {
+        font-size: 56px;
+    }
+}
