@@ -100,6 +100,7 @@ li {
 
 .card-profile-view li {
     cursor: pointer;
+    text-transform: capitalize;
 }
 
 .activities {
